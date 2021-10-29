@@ -1,0 +1,27 @@
+train.py:82: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  nn.init.xavier_uniform(m.weight)
+/home/gy/ENV9/local/lib/python3.5/site-packages/torchvision/transforms/transforms.py:208: UserWarning: The use of the transforms.Scale transform is deprecated, please use transforms.Resize instead.
+  "please use transforms.Resize instead.")
+Namespace(batch_size=5, beginpoint=0, beta1=0.5, beta2=0.999, crop_size=False, decay_epoch=15, fliplr=True, input_size=256, lambdaA=0.5, lambdaB=0.85, lambdaC=0.3, log_schedule=20, lr=0.0001, num_epochs=85, resize_scale=256, use_cuda=True, weight_decay=0.005)
+Total number of parameters: 407481
+Total number of parameters: 185857
+Total number of parameters: 357066
+5770
+5770
+2792
+2793
+Starting to train the model...
+current learning rate: 0.000100 weight decay: 0.005000
+Epoch [1/85]  Step [100/5770]  Loss 1.9569 encoder_ssim 0.2365 enocder_mssim 0.2365 encoder_mse 0.1640  decoder_ssim 0.4202 decoder_mssim 0.4202 decoder_mse 0.0370 disloss 0.6420
+Epoch [1/85]  Step [200/5770]  Loss 1.6543 encoder_ssim 0.3563 enocder_mssim 0.4714 encoder_mse 0.1047  decoder_ssim 0.5016 decoder_mssim 0.6271 decoder_mse 0.0286 disloss 0.6592
+Epoch [1/85]  Step [300/5770]  Loss 1.5723 encoder_ssim 0.3965 enocder_mssim 0.5127 encoder_mse 0.0895  decoder_ssim 0.5205 decoder_mssim 0.6071 decoder_mse 0.0272 disloss 0.6223
+Traceback (most recent call last):
+  File "train.py", line 692, in <module>
+    total_train(beginpoint=0)
+  File "train.py", line 492, in total_train
+    train(epoch)
+  File "train.py", line 257, in train
+    decoder_optimizer.step()
+  File "/home/gy/ENV9/local/lib/python3.5/site-packages/torch/optim/adam.py", line 93, in step
+    exp_avg_sq.mul_(beta2).addcmul_(1 - beta2, grad, grad)
+KeyboardInterrupt
